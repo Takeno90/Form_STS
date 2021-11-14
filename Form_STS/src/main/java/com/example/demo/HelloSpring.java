@@ -22,7 +22,7 @@ public class HelloSpring {
 		String sexuality = sex.equals("maile") ? "君" : "さん";
 		String message = "こんにちは！" + nickname + sexuality + "の好きなディストリビューションは" + distribution + "ですね。";
 		model.addAttribute("th_greet",message);
-		return "index";
+		return "result";
 	}
 
 
