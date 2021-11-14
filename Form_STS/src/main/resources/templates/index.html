@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>Hello Page</title>
 </head>
 <body>
-	<form method="post" action="/result">
-		名前を入力してください<br>
-		<input type="text" name="inputvalue">
-		<input type="submit" value="送信">
-	</form>
+	<main>
+		<h1>Sample Application</h1>
+		<p th:text="${th_greet}" class="greet"></p>
+		<form method="POST" action="/">
+			<p>氏名</p>
+			<input type="form" name="nickname" placeholder="ニックネーム">
+			<div>
+				<p>性別</p>
+				<input id="radio_male" type="radio" name="radio_1" value="male">
+				<label for="radio_male">男性</label> <input id="radio_female"
+					type="radio" name="radio_1" value="female"> <label
+					for="radio_female">女性</label>
+			</div>
+			<p>好きなOS</p>
+			<select id="select_1" name="favorite_distribution">
+				<option value="CentOS">CentOS</option>
+				<option value="Ubuntu">Ubuntu</option>
+				<option value="debian">debian</option>
+				<option value="Arch">Arch</option>
+				<option value="Gentoo">Gentoo</option>
+			</select>
+			<div style="margin: 2rem 0rem">
+				<input type="submit" value="SEND">
+			</div>
+		</form>
+	</main>
 </body>
 </html>
