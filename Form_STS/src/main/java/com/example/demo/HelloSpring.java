@@ -19,7 +19,7 @@ public class HelloSpring {
 							@RequestParam("radio_1")String sex,
 							@RequestParam("favorite_distribution")String distribution,
 							Model model) {
-		String sexuality = sex.equals("maile") ? "君" : "さん";
+		String sexuality = sex.equals("male") ? "君" : "さん";
 		String message = "こんにちは！" + nickname + sexuality + "の好きなディストリビューションは" + distribution + "ですね。";
 		model.addAttribute("th_greet",message);
 		return "result";

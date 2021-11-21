@@ -10,13 +10,13 @@
 		<p th:text="${th_greet}" class="greet"></p>
 		<form method="POST" action="/">
 			<p>氏名</p>
-			<input type="form" name="nickname" placeholder="ニックネーム">
+			<input type="text" name="nickname" placeholder="ニックネーム" required>
 			<div>
 				<p>性別</p>
-				<input id="radio_male" type="radio" name="radio_1" value="male">
-				<label for="radio_male">男性</label> <input id="radio_female"
-					type="radio" name="radio_1" value="female"> <label
-					for="radio_female">女性</label>
+				<input id="radio_male" type="radio" name="radio_1" value="male" checked>
+				<label for="radio_male">男性</label> 
+				<input id="radio_female" type="radio" name="radio_1" value="female">
+				<label for="radio_female">女性</label>
 			</div>
 			<p>好きなOS</p>
 			<select id="select_1" name="favorite_distribution">
